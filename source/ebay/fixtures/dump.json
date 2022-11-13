@@ -1,0 +1,97 @@
+[
+{
+    "model": "ebay.product",
+    "pk": 1,
+    "fields": {
+        "name": "Веселый молочник",
+        "description": "Молоко. 2.5%. дата выпуска: 11.11.2022. Срок голности: 10 дней.",
+        "category": "food",
+        "remainder": 30,
+        "price": "70.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 2,
+    "fields": {
+        "name": "Хлеб",
+        "description": "Хлеб солдатский. Дата выпуска: завтра. вес: 450гр.",
+        "category": "food",
+        "remainder": 20,
+        "price": "23.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 3,
+    "fields": {
+        "name": "машинка",
+        "description": "Красная машинка ө молния МакКуин. Из серии 20004591",
+        "category": "toys",
+        "remainder": 5,
+        "price": "350.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 4,
+    "fields": {
+        "name": "Ручка",
+        "description": "Ручка гелевая сo стираемыми чернилами ErichKrause® R-301 Magic Gel 0.5, цвет чернил синий (в коробке по 12 шт.)",
+        "category": "stationary",
+        "remainder": 1000,
+        "price": "60.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 5,
+    "fields": {
+        "name": "Мартин Иден",
+        "description": "роман Джека Лондона. Впервые был напечатан в журнале «The Pacific Monthly» в 1908—1909 годах и уже в 1909 году вышел отдельной книгой в издательстве «Макмиллан компани»",
+        "category": "books",
+        "remainder": 17,
+        "price": "980.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 6,
+    "fields": {
+        "name": "щетка-дворника",
+        "description": "Щетка автомобильного дворника. Стандартная",
+        "category": "other",
+        "remainder": 6,
+        "price": "250.00"
+    }
+},
+{
+    "model": "ebay.product",
+    "pk": 7,
+    "fields": {
+        "name": "Фуагра",
+        "description": "Надо удалить из базы. Давно не завозят",
+        "category": "food",
+        "remainder": 0,
+        "price": "670.00"
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$ZWnPb4XS9CvhfFaMED58Gs$32LXJtZbJeWF7Kwmk9iyPj/A8Q2tAEo2rQyOveQAk/Y=",
+        "last_login": "2022-11-13T06:31:46.490Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-11-13T06:31:14.965Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

@@ -4,8 +4,12 @@
 main page
 {% endblock %}
 
+{% block menu %}
+    <li><a href="{% url 'create_product' %}">Добавить</a></li>
+{% endblock %}
+
 {% block content %}
-    <div><h2>Все товары</h2><br><br><br></div>
+    <div><br><br><br><h2>Все товары</h2><br><br><br></div>
     {% for product in products %}
         <br><h5><a href="{% url 'view_product' product.id %}">{{ product.name }}</a></h5><br>
         <p>Цена: {{ product.price }}</p>

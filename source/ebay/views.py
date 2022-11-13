@@ -11,3 +11,15 @@ def main_page(request):
 def view_product(request, pk, *args, **kwargs):
     product = get_object_or_404(Product, pk=pk)
     return render(request, 'product.html', {'product': product})
+
+
+def create_product(request, pk, *args, **kwargs):
+    pass
+
+
+def update_product(request, pk, *args, **kwargs):
+    pass
+
+
+def delete_product(request, pk, *args, **kwargs):
+    pass

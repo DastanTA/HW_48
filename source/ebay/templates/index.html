@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+main page
+{% endblock %}
+
+{% block content %}
+    <div><h2>Все товары</h2><br><br><br></div>
+    {% for product in products %}
+        <br><h5><a href="{% url 'view_product' product.id %}">{{ product.name }}</a></h5><br>
+        <p>Цена: {{ product.price }}</p>
+        <p>Категория: {{ product.get_category_display }}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock %}

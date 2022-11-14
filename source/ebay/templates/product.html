@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 {{ product.name }}
 {% endblock %}
 
 {% block content %}
-    <br><br><h4>{{ product.name }}</h4><br>
-    <p>{{ product.get_category_display }}</p>
+    <br><br><h4>{{ product.name }} <span class="category">[{{ product.get_category_display }}]</span></h4><br>
     <p>Цена: {{ product.price }}</p>
     <p>Остаток: {{ product.remainder }}</p>
     <br><p style="white-space: pre-wrap">Детали: {{ product.description }}</p>

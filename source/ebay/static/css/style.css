@@ -9,6 +9,12 @@
     box-shadow: red 0 0 3px;
 }
 
+span.category{
+    font-size: 12px;
+    color: dimgrey;
+}
+
+
 a.delete_no_link{
     font: bold 15px Arial;
     text-decoration: none;

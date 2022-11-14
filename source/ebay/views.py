@@ -34,7 +34,29 @@ def create_product(request, *args, **kwargs):
 
 
 def update_product(request, pk, *args, **kwargs):
-    pass
+    product = get_object_or_404(Product, pk=pk)
+    if request.method == "GET":
+        form = ProductForm(initial={
+            'name': product.name,
+            'category': product.category,
+            'price': product.price,
+            'remainder': product.remainder,
+            'description': product.description
+        })
+        context = {'form': form, 'product': product}
+        return render(request, 'update.html', context)
+    elif request.method == "POST":
+        form = ProductForm(data=request.POST)
+        if form.is_valid():
+            product.name = form.cleaned_data.get('name')
+            product.category = form.cleaned_data.get('category')
+            product.price = form.cleaned_data.get('price')
+            product.remainder = form.cleaned_data.get('remainder')
+            product.description = form.cleaned_data.get('description')
+            product.save()
+            return redirect('view_product', pk=product.pk)
+        else:
+            return render(request, 'update.html', {'form': form, 'product': product})
 
 
 def delete_product(request, pk, *args, **kwargs):

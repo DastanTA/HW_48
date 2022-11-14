@@ -13,7 +13,8 @@ main page
     {% for product in products %}
         <br><h5><a href="{% url 'view_product' product.id %}">{{ product.name }}</a></h5><br>
         <p>Цена: {{ product.price }}</p>
-        <p>Категория: {{ product.get_category_display }}</p>
+        <p>Категория: {{ product.get_category_display }}</p><br>
+        <a href="#" >Удалить</a> <a href="{% url 'update_product' product.id %}" >Исправить</a>
         <hr>
     {% endfor %}
 

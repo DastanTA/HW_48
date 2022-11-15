@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from ebay.models import Product
+from ebay.models import Product, CATEGORY_CHOICES
 from ebay.forms import ProductForm
 
 
@@ -66,3 +66,9 @@ def delete_product(request, pk, *args, **kwargs):
     elif request.method == "POST":
         product.delete()
         return redirect('main')
+
+
+def by_category_view(request, category, *args, **kwargs):
+    products = Product.objects.all().filter(category=category, remainder__gt=0).order_by('name')
+    context = {'products': products, 'category': category}
+    return render(request, 'by_category.html', context)

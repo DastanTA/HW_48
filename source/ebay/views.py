@@ -60,4 +60,9 @@ def update_product(request, pk, *args, **kwargs):
 
 
 def delete_product(request, pk, *args, **kwargs):
-    pass
+    product = get_object_or_404(Product, pk=pk)
+    if request.method == "GET":
+        return render(request, 'delete.html', {'product': product})
+    elif request.method == "POST":
+        product.delete()
+        return redirect('main')

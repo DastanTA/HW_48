@@ -15,3 +15,6 @@ class Product(models.Model):
         verbose_name='категория')
     remainder = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=7, decimal_places=2)
+
+    def __str__(self):
+        return f'{self.name}_(id: {self.id})'

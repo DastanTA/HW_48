@@ -70,5 +70,9 @@ def delete_product(request, pk, *args, **kwargs):
 
 def by_category_view(request, category, *args, **kwargs):
     products = Product.objects.all().filter(category=category, remainder__gt=0).order_by('name')
-    context = {'products': products, 'category': category}
+    category_value = ''
+    for a in CATEGORY_CHOICES:
+        if category in a:
+            category_value = a[1]
+    context = {'products': products, 'category_value': category_value}
     return render(request, 'by_category.html', context)

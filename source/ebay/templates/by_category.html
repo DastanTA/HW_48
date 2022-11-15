@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-{{ category }}
+{{ category_value }}
 {% endblock %}
 
 {% block menu %}
@@ -22,12 +22,7 @@
 {% endblock %}
 
 {% block content %}
-    <div><br><br><br><h2>Все товары категории "{{ category }}"</h2><br><br><br></div>
-    {% for product in products %}
-        <br><h5><a href="{% url 'view_product' product.id %}">{{ product.name }}</a></h5><br>
-        <p>Цена: {{ product.price }}</p>
-        <a href="{% url 'delete_product' product.id %}" >Удалить</a> <a href="{% url 'update_product' product.id %}" >Исправить</a>
-        <hr>
-    {% endfor %}
+    <div><br><br><br><h2>Все товары категории "{{ category_value }}"</h2><br><br><br></div>
+    {% include 'partial/listing_elements.html' %}
 
 {% endblock %}
